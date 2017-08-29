@@ -10,7 +10,7 @@ var db = require("../models/");
 router.get("/", function(req, res) {
 	db.Burger.findAll()
 		.then(function(Burgerdb){
-			// console.log(Burgerdb);
+			console.log(Burgerdb);
 
 			var hbsObject = {burger: Burgerdb };
 			return res.render("index", hbsObject)
